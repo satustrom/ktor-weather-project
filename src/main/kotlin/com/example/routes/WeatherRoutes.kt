@@ -22,5 +22,6 @@ fun Route.weatherRouting() {
             call.respond(weather)
           
         }
+
     }
 }

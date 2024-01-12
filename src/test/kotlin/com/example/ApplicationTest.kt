@@ -9,9 +9,9 @@ import kotlin.test.*
 class WeatherRouteTest {
     @Test
     fun testGetWeather() = testApplication {
-        val response = client.get("/weather/London")
+        val response = client.get("/weather/london")
         assertEquals(
-            """{"id":"1","address":"London","days":[{"datetime":"2024-01-12","temp":5.4,"feelslike":3.7},{"datetime":"2024-01-11","temp":7.4,"feelslike":10.1}]}""",
+            """{"id":"1","address":"london","days":[{"datetime":"2024-01-12","temp":5.4,"feelslike":3.7},{"datetime":"2024-01-11","temp":7.4,"feelslike":10.1}]}""",
             response.bodyAsText()
         )
         assertEquals(HttpStatusCode.OK, response.status)
